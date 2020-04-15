@@ -50,6 +50,9 @@ class DkLowLevelCtrl():
 
         #--- Create the Subscriber to Twist commands
         self.ros_sub_twist          = rospy.Subscriber("/cmd_vel", Twist, self.set_actuators_from_cmdvel)
+        #self.ros_sub_twist_T          = rospy.Subscriber("/vehicle/throttle_cmd", Twist, self.set_actuators_from_cmdvel)
+        #self.ros_sub_twist_B          = rospy.Subscriber("/vehicle/brake_cmd", Twist, self.set_actuators_from_cmdvel)
+        #self.ros_sub_twist_S          = rospy.Subscriber("/vehicle/steering_cmd", Twist, self.set_actuators_from_cmdvel)
         rospy.loginfo("> Subscriber corrrectly initialized")
 
         #--- Get the last time e got a commands
